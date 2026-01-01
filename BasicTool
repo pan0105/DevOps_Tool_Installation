@@ -1,0 +1,93 @@
+-key pair is like your access key.
+-server will always have ec2 user
+-To sing in as a root user in lunix use "sudo su" command
+-yum install python ==> will install python on aws system from internet
+-yum is repository management /with this we install any softwaare on linux system.
+-yum for Linux
+-/apt for ubantu
+-curl is used with https
+-hitting the end point and downloading the data
+[root@ip-172-31-17-70 ec2-user]# curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+
+
+yum install unzip
+[root@ip-172-31-17-70 ec2-user]# curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"^C
+ls
+[root@ip-172-31-17-70 ec2-user]# ./aws/install   ====>here we are going into aws folder and installing the file
+-why we are using amazon CLI --to use the access key 
+-yum install git 
+-git clone https://github.com/DEVOPS-WITH-WEB-DEV/Splunk_Grafana_Setup.git
+
+
+-CURL is for open end points not for the organizational end points.
+
+cd /opt/
+
+wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+
+New link : wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+
+tar xvzf apache-maven-3.6.3-bin.tar.gz
+
+vim /etc/profile.d/maven.sh
+
+export MAVEN_HOME=/opt/apache-maven-3.6.3
+export PATH=$PATH:$MAVEN_HOME/bin
+
+mvn -v
+
+opt  -->download the software operation file
+
+:wq is a Vim / Vi editor command.   Write (save) the file and Quit the editor
+
+===================================
+to come out of a vim editor
+To save the file and exit Vim, do exactly this 👇
+
+1)Press Esc
+
+2)Type: 
+:wq
+
+3)Press Enter
+==========================================
+sudo yum update -y
+Installing jenkins in /opt folder
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+
+jenkin has a key so we need to import key 
+rpm=report/redhat package manager
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key 
+
+sudo yum install jenkins -y   =====>installing the jenkins
+systemctl daemon-reload       ======reloading the installing background processes
+sudo systemctl start jenkins  ======>starting the jenkins
+sudo systemctl enable jenkins
+systemctl status jenkins
+
+-sudo is for root permission 
+-systemctl ==>this is a command which will check wheather install is done or not 
+-start is to just start the software enable means even tho system is shutdown the software will be running 24*7
+-control c is for closing the terminal
+==============================================
+yum install docker -y
+
+start and enable should be used in all tools
+
+usermod -aG docker jenkins[Add jenkins user to docker group]
+systemctl start docker
+systemctl enable docker
+==========================================
+installing kubernetes
+curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir -p $HOME/bin
+cp ./kubectl $HOME/bin/kubectl
+export PATH=$HOME/bin:$PATH
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
+===========================================
+./aws/install
+aws --version
