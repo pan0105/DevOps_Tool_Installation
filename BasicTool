@@ -91,3 +91,10 @@ source ~/.bashrc
 ===========================================
 ./aws/install
 aws --version
+=========================================
+| Symbol  | Meaning        |
+| ------- | -------------- |
+| `~`     | Home directory |
+| `/root` | Root’s home    |
+| `$`     | Normal user    |
+| `#`     | Root user      |
